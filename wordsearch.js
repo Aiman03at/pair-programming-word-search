@@ -94,13 +94,12 @@ for (l of diagonal2) {
 }
       
 }
-
-
-  
       return false;
     
   };
     
     
 module.exports=wordSearch;
+
+//@Completed by @ shadmanRahman & @Aiman
     
