@@ -35,4 +35,53 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("should return true if the word is present", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'I', 'N', 'F', 'E', 'L', 'D'],
+      ['Y', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'O', 'M', 'E', 'C', 'O', 'M', 'E'],
+      ['W', 'H', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'HOMECOME')
+
+    assert.isTrue(result);
+  });
+
+  it("should return true if the word is present backwards direction", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['E', 'M', 'O', 'C', 'E', 'M', 'O', 'H'],
+      ['Y', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'O', 'M', 'E', 'C', 'O', 'M', 'E'],
+      ['W', 'H', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['E', 'M', 'O', 'C', 'E', 'M', 'O', 'H'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'HOMECOME')
+
+    assert.isTrue(result);
+  });
+
+
+  it("should return true if the word is present IN A DIAGONAL DIRECTION direction", function() {
+    const result = wordSearch([
+      ['A', 'W', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['E', 'M', 'O', 'C', 'E', 'M', 'O', 'H'],
+      ['Y', 'F', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'O', 'M', 'E', 'C', 'O', 'M', 'E'],
+      ['W', 'H', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'F', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'B', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['E', 'M', 'O', 'C', 'E', 'M', 'O', 'H'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'AMCEYEAH')
+
+    assert.isTrue(result);
+  });
 });
